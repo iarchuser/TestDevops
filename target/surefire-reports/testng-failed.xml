@@ -7,7 +7,9 @@
         <methods>
           <include name="test_Login"/>
           <include name="teardown"/>
+          <include name="test_EnterUser"/>
           <include name="setup"/>
+          <include name="test_EnterPassword"/>
         </methods>
       </class> <!-- testcases.LoginTest -->
     </classes>

@@ -43,7 +43,7 @@ public class LoginTest extends BaseClass {
 	{
 		btn_Login  = driver.findElement(By.name("btnLogin"));
 		btn_Login.click();
-		Assert.assertEquals(driver.getTitle(), "Guru99 Bank Manager Home Page");
+		Assert.assertEquals(driver.getTitle(), "Guru99 Bank Manager HomePage");
 		
 	}
 
