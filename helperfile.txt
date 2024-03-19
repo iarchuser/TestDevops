@@ -1,0 +1,5 @@
+Create pages package and create page objects for loginpage
+Create base class
+create dynamic wait
+create login test with different annotations
+create listenerclass and integrate
