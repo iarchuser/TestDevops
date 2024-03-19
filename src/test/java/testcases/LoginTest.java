@@ -28,14 +28,14 @@ public class LoginTest extends BaseClass {
 	public void test_EnterUser()
 	{
 		txt_uname = driver.findElement(By.xpath("//input[@name='uid']"));;
-		txt_uname.sendKeys(username);
+		sendKeys(driver, txt_uname, 15, username);
 	}
 	
 	@Test(priority=2)
 	public void test_EnterPassword()
 	{
 		txt_pwd = driver.findElement(By.name("password")); 
-		txt_pwd.sendKeys(password);
+		sendKeys(driver, txt_pwd, 15, password);
 	}
 	
 	@Test(priority=3)

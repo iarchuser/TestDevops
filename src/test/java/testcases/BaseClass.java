@@ -1,7 +1,14 @@
 package testcases;
 
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -32,6 +39,13 @@ public class BaseClass {
 	public void teardown()
 	{
 		driver.quit();
+	}
+	
+	public void sendKeys(WebDriver driver, WebElement element, int i, String value)
+	{
+		Duration duration = Duration.of(i, ChronoUnit.SECONDS);
+		new WebDriverWait(driver, duration).until(ExpectedConditions.visibilityOf(element));
+		element.sendKeys(value);
 	}
 
 }
