@@ -16,10 +16,12 @@ public class BaseClass {
 	private String url = config.getURL();;
 	
 	@BeforeClass()
-	public void setup()
+	public void setup() throws InterruptedException
 	{
 		System.setProperty("Webdreiver.chrome.driver","./Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
+		System.out.println("Browser launched");
+		Thread.sleep(2000);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.get(url);
