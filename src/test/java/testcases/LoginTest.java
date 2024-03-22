@@ -29,6 +29,7 @@ public class LoginTest extends BaseClass {
 	{
 		txt_uname = driver.findElement(By.xpath("//input[@name='uid']"));;
 		sendKeys(driver, txt_uname, 15, username);
+		
 	}
 	
 	@Test(priority=2)
